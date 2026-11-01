@@ -1,0 +1,10 @@
+{
+  "model_id": "google/siglip-base-patch16-224",
+  "model_kind": "siglip",
+  "num_frames": 6662,
+  "embedding_dimension": 768,
+  "l2_normalized": true,
+  "device": "mps",
+  "batch_size": 32,
+  "source_manifest": "/Users/vanshikaarora/Desktop/Tracking/data/processed/sequences.csv"
+}

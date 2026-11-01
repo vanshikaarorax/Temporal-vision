@@ -1,0 +1,3 @@
+model,embedding_dimension,mean_adjacent_similarity,median_adjacent_similarity,std_adjacent_similarity,num_adjacent_pairs
+CLIP,512,0.9257142426503473,0.9367562830448151,0.05021433910565775,5712
+SigLIP,768,0.9340608422474868,0.9452665448188782,0.0498991841270844,5712

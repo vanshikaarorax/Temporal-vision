@@ -1,0 +1,5 @@
+encoder,classifier_model,joined_videos,classifier_accuracy,vlm_label_coverage,vlm_accuracy_counting_uncertain_wrong
+clip,SingleFrame,143,94.4055944055944,66.43356643356644,56.64335664335665
+clip,Transformer_Encoder,143,98.6013986013986,66.43356643356644,56.64335664335665
+siglip,SingleFrame,143,97.2027972027972,66.43356643356644,56.64335664335665
+siglip,Transformer_Encoder,143,95.1048951048951,66.43356643356644,56.64335664335665

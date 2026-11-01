@@ -1,0 +1,101 @@
+video_id,ground_truth_label,frame_indices,status,latency_seconds,sequence_description,temporal_changes,semantic_label,semantic_label_confidence,label_evidence,ambiguous_observations,early_observation,later_observation,early_vs_later,uncertainty_notes,parse_error,error,raw_response
+#20_Rhythm_clap_u_nm_np1_fr_goo_0,clap,"[0, 22, 33, 44, 66]",success,21.553545916918665,"A man is standing in front of a whiteboard, holding a piece of paper, and talking. The whiteboard has a music sheet on it.","[""The man is holding a piece of paper, and the whiteboard is visible in the background.""]",clap,high,"['The man is holding a piece of paper, which is a common tool for writing or drawing on whiteboards.']","[""The whiteboard is visible in the background, which could indicate that the man is in a classroom or a similar setting.""]","The man is holding a piece of paper, and the whiteboard is visible in the background.","The man is talking, and the whiteboard is still visible in the background.","The man is holding a piece of paper, and the whiteboard is visible in the background.","[""The exact nature of the music sheet on the whiteboard is not clear, but it could be a musical notation or a piece of paper with notes.""]",,,"```json
+{
+  ""sequence_description"": ""A man is standing in front of a whiteboard, holding a piece of paper, and talking. The whiteboard has a music sheet on it."",
+  ""temporal_changes"": [
+    ""The man is holding a piece of paper, and the whiteboard is visible in the background.""
+  ],
+  ""semantic_label"": ""clap"",
+  ""semantic_label_confidence"": ""high"",
+  ""label_evidence"": [
+    ""The man is holding a piece of paper, which is a common tool for writing or drawing on whiteboards.""
+  ],
+  ""ambiguous_observations"": [
+    ""The whiteboard is visible in the background, which could indicate that the man is in a classroom or a similar setting.""
+  ],
+  ""early_observation"": ""The man is holding a piece of paper, and the whiteboard is visible in the background."",
+  ""later_observation"": ""The man is talking, and the whiteboard is still visible in the background."",
+  ""early_vs_later"": ""The man is holding a piece of paper, and the whiteboard is visible in the background."",
+  ""uncertainty_notes"": [
+    ""The exact nature of the music sheet on the whiteboard is not clear, but it could be a musical notation or a piece of paper with notes.""
+  ]
+}
+```"
+96_Meter_Bungy-Jump__Jauntal_02_dive_f_cm_np1_ri_bad_0,dive,"[0, 34, 51, 68, 102]",parse_error,16.983294875128195,,[],,,,[],,,,[],"JSON parse error: Expecting ',' delimiter: line 10 column 167 (char 1129)",,"```json
+{
+  ""sequence_description"": ""A person is standing on a bridge, with a mountain range in the background."",
+  ""temporal_changes"": [
+    {""time"": ""image 1"", ""description"": ""A person is standing on a bridge, with a mountain range in the background.""},
+    {""time"": ""image 2"", ""description"": ""The person is now climbing up the bridge.""},
+    {""time"": ""image 3"", ""description"": ""The person is now climbing up the bridge, with a mountain range in the background.""},
+    {""time"": ""image 4"", ""description"": ""The person is now climbing up the bridge, with a mountain range in the background, and a person is now jumping off the side.""},
+    {""time"": ""image 5"", ""description"": ""The person is now jumping off the side, with a mountain range in the background, and a person is now standing on the bridge.""},
+    {""time"": ""image 6"", ""description"": ""The person is now standing on the bridge, with a mountain range in the background, and a person is now jumping off the side.""},
+    {""time"": ""image 7"", ""description"": ""The person is now jumping off the side, with a mountain range in the background, and a person is now standing on the bridge.""},
+    {""time"": ""image 8"", ""description"": ""The person is now standing on the bridge, with a mountain range in the background, and a person is now jumping off the side"
+A_Round_of_Applause_clap_u_cm_np1_fr_med_0,clap,"[0, 22, 33, 44, 66]",success,12.304007457802072,"A young child is sitting on a trampoline, clapping and smiling. The child is wearing a blue shirt and striped pants.","[""The child's hands are now clapping, and he is smiling.""]",clap,high,['The child is clapping his hands.'],"[""The child is not clapping his hands.""]",The child is sitting on the trampoline.,The child is clapping his hands.,"The child is clapping his hands, which is a clear action.","[""The child's facial expression is not explicitly clear, but he is smiling.""]",,,"```json
+{
+  ""sequence_description"": ""A young child is sitting on a trampoline, clapping and smiling. The child is wearing a blue shirt and striped pants."",
+  ""temporal_changes"": [
+    ""The child's hands are now clapping, and he is smiling.""
+  ],
+  ""semantic_label"": ""clap"",
+  ""semantic_label_confidence"": ""high"",
+  ""label_evidence"": [
+    ""The child is clapping his hands.""
+  ],
+  ""ambiguous_observations"": [
+    ""The child is not clapping his hands.""
+  ],
+  ""early_observation"": ""The child is sitting on the trampoline."",
+  ""later_observation"": ""The child is clapping his hands."",
+  ""early_vs_later"": ""The child is clapping his hands, which is a clear action."",
+  ""uncertainty_notes"": [
+    ""The child's facial expression is not explicitly clear, but he is smiling.""
+  ]
+}
+```"
+Acrobacias_de_un_fenomeno_cartwheel_f_cm_np1_fr_bad_5,cartwheel,"[0, 13, 19, 26, 39]",success,13.525919083040208,A person is performing a cartwheel in a grassy field.,"[""The person is seen performing a cartwheel in the first frame, and then they are seen doing it again in the second frame.""]",cartwheel,high,"['The person is seen performing a cartwheel in the first frame, and then they are seen doing it again in the second frame.']","[""The person is performing a cartwheel, but the cartwheel is not clearly visible in the first frame.""]",The person is performing a cartwheel in the first frame.,The person is performing a cartwheel in the second frame.,"The cartwheel is performed in both frames, but the cartwheel is not clearly visible in the first frame.","[""The cartwheel is not clearly visible in the first frame, which may affect the accuracy of the label.""]",,,"```json
+{
+  ""sequence_description"": ""A person is performing a cartwheel in a grassy field."",
+  ""temporal_changes"": [
+    ""The person is seen performing a cartwheel in the first frame, and then they are seen doing it again in the second frame.""
+  ],
+  ""semantic_label"": ""cartwheel"",
+  ""semantic_label_confidence"": ""high"",
+  ""label_evidence"": [
+    ""The person is seen performing a cartwheel in the first frame, and then they are seen doing it again in the second frame.""
+  ],
+  ""ambiguous_observations"": [
+    ""The person is performing a cartwheel, but the cartwheel is not clearly visible in the first frame.""
+  ],
+  ""early_observation"": ""The person is performing a cartwheel in the first frame."",
+  ""later_observation"": ""The person is performing a cartwheel in the second frame."",
+  ""early_vs_later"": ""The cartwheel is performed in both frames, but the cartwheel is not clearly visible in the first frame."",
+  ""uncertainty_notes"": [
+    ""The cartwheel is not clearly visible in the first frame, which may affect the accuracy of the label.""
+  ]
+}
+```"
+AgentCodyBanks_climb_stairs_f_cm_np1_fr_med_9,climb_stairs,"[0, 18, 28, 37, 56]",success,16.680112041998655,"A man is running on a beach, with ducks in the grass.","[[""man is running on a beach"", ""man is running on a beach""]]",uncertain/other,low,['man is running on a beach'],"[""man is running on a beach""]",man is running on a beach,man is running on a beach,man is running on a beach,"[""The video does not provide enough information to determine the specific action being performed.""]",,,"```json
+{
+  ""sequence_description"": ""A man is running on a beach, with ducks in the grass."",
+  ""temporal_changes"": [
+    [""man is running on a beach"", ""man is running on a beach""]
+  ],
+  ""semantic_label"": ""uncertain/other"",
+  ""semantic_label_confidence"": ""low"",
+  ""label_evidence"": [
+    ""man is running on a beach""
+  ],
+  ""ambiguous_observations"": [
+    ""man is running on a beach""
+  ],
+  ""early_observation"": ""man is running on a beach"",
+  ""later_observation"": ""man is running on a beach"",
+  ""early_vs_later"": ""man is running on a beach"",
+  ""uncertainty_notes"": [
+    ""The video does not provide enough information to determine the specific action being performed.""
+  ]
+}
+```"

@@ -1,0 +1,2 @@
+videos,valid_structured_output_rate,class_label_coverage,accuracy_on_emitted_class_labels,accuracy_with_uncertain_counted_wrong,uncertain_other_rate,median_latency_seconds
+143,0.7972027972027972,0.6643356643356644,0.8526315789473684,0.5664335664335665,0.3356643356643356,13.497773417038843

@@ -1,0 +1,177 @@
+{
+  "project": "Temporal Vision \u2014 Temporal Evaluation",
+  "stage": 5,
+  "dataset": "HMDB51 local subset",
+  "project_root": "/Users/vanshikaarora/Desktop/Tracking",
+  "output_root": "/Users/vanshikaarora/Desktop/Tracking/Temporal-Evaluation",
+  "embedding_root": "/Users/vanshikaarora/Desktop/Tracking/embeddings/embedding-store",
+  "stage4_root": "/Users/vanshikaarora/Desktop/Tracking/Single-multiframe",
+  "device": "mps",
+  "python_version": "3.11.15",
+  "pytorch_version": "2.15.0",
+  "seed": 42,
+  "test_video_count": 143,
+  "classes": [
+    "brush_hair",
+    "cartwheel",
+    "catch",
+    "chew",
+    "clap",
+    "climb",
+    "climb_stairs",
+    "dive",
+    "draw_sword"
+  ],
+  "split_source": "/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/data-splits/video_level_splits.csv",
+  "encoders": {
+    "clip": 512,
+    "siglip": 768
+  },
+  "loaded_checkpoints": [
+    {
+      "encoder": "clip",
+      "model": "SingleFrame",
+      "checkpoint": "/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Baseline/clip/SingleFrame/best_model.pt",
+      "best_epoch": 14,
+      "best_validation_macro_f1": 0.9434175206670962
+    },
+    {
+      "encoder": "clip",
+      "model": "MeanPooling",
+      "checkpoint": "/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Baseline/clip/MeanPooling_Control/best_model.pt",
+      "best_epoch": 13,
+      "best_validation_macro_f1": 0.9674038468605531
+    },
+    {
+      "encoder": "clip",
+      "model": "GRU",
+      "checkpoint": "/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Temporal/GRU/clip/best_model.pt",
+      "best_epoch": 13,
+      "best_validation_macro_f1": 0.9550429103060681
+    },
+    {
+      "encoder": "clip",
+      "model": "LSTM",
+      "checkpoint": "/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Temporal/LSTM/clip/best_model.pt",
+      "best_epoch": 22,
+      "best_validation_macro_f1": 0.9609765609765609
+    },
+    {
+      "encoder": "clip",
+      "model": "Transformer_Encoder",
+      "checkpoint": "/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Temporal/Transformer_Encoder/clip/best_model.pt",
+      "best_epoch": 14,
+      "best_validation_macro_f1": 0.9739207106142591
+    },
+    {
+      "encoder": "clip",
+      "model": "Temporal_CNN",
+      "checkpoint": "/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Temporal/Temporal_CNN/clip/best_model.pt",
+      "best_epoch": 18,
+      "best_validation_macro_f1": 0.9676495837998385
+    },
+    {
+      "encoder": "siglip",
+      "model": "SingleFrame",
+      "checkpoint": "/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Baseline/siglip/SingleFrame/best_model.pt",
+      "best_epoch": 26,
+      "best_validation_macro_f1": 0.9382648880681926
+    },
+    {
+      "encoder": "siglip",
+      "model": "MeanPooling",
+      "checkpoint": "/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Baseline/siglip/MeanPooling_Control/best_model.pt",
+      "best_epoch": 20,
+      "best_validation_macro_f1": 0.9677105302105302
+    },
+    {
+      "encoder": "siglip",
+      "model": "GRU",
+      "checkpoint": "/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Temporal/GRU/siglip/best_model.pt",
+      "best_epoch": 18,
+      "best_validation_macro_f1": 0.9324403792145728
+    },
+    {
+      "encoder": "siglip",
+      "model": "LSTM",
+      "checkpoint": "/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Temporal/LSTM/siglip/best_model.pt",
+      "best_epoch": 13,
+      "best_validation_macro_f1": 0.9498427964202946
+    },
+    {
+      "encoder": "siglip",
+      "model": "Transformer_Encoder",
+      "checkpoint": "/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Temporal/Transformer_Encoder/siglip/best_model.pt",
+      "best_epoch": 5,
+      "best_validation_macro_f1": 0.9699384451548103
+    },
+    {
+      "encoder": "siglip",
+      "model": "Temporal_CNN",
+      "checkpoint": "/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Temporal/Temporal_CNN/siglip/best_model.pt",
+      "best_epoch": 17,
+      "best_validation_macro_f1": 0.9567853832212605
+    }
+  ],
+  "experiments": {
+    "progressive_observation": {
+      "method": "uniformly sample k observations across the full temporal span; k=1 uses middle frame",
+      "k_values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "models": [
+        "SingleFrame",
+        "MeanPooling",
+        "GRU",
+        "LSTM",
+        "Transformer_Encoder",
+        "Temporal_CNN"
+      ],
+      "retrained": false
+    },
+    "temporal_order": {
+      "conditions": [
+        "chronological",
+        "reversed",
+        "shuffled"
+      ],
+      "random_shuffle_repeats": 20,
+      "seed": 42
+    },
+    "observation_corruption": {
+      "conditions": {
+        "frame_drop_retained_fraction": [
+          0.75,
+          0.5,
+          0.25
+        ],
+        "feature_mask_fraction": [
+          0.25,
+          0.5,
+          0.75
+        ],
+        "gaussian_noise_std_relative_to_train_feature_std": [
+          0.1,
+          0.25,
+          0.5
+        ]
+      },
+      "noise_scale_estimated_from_train_videos_only": true,
+      "pixel_blur_or_pixel_occlusion_applied": false,
+      "reason": "Only precomputed frame embeddings are available in this notebook."
+    }
+  },
+  "limitations": [
+    "Models were trained on full sequences; progressive observation evaluates reduced inputs without retraining.",
+    "Embedding-space masking/noise is not equivalent to pixel-space blur or partial image occlusion.",
+    "Single-frame baseline cannot be meaningfully degraded by dropping additional frames.",
+    "Results are limited to the current HMDB51 subset and saved test split.",
+    "Best temporal model selection based on stage-4 test metrics is descriptive, not confirmatory."
+  ]
+}

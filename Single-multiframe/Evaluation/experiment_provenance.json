@@ -1,0 +1,94 @@
+{
+  "project": "Temporal Vision \u2014 Single-Frame vs Temporal Modeling",
+  "dataset": "HMDB51 local subset",
+  "seed": 42,
+  "device": "mps",
+  "python_version": "3.11.15",
+  "pytorch_version": "2.15.0",
+  "numpy_version": "2.4.6",
+  "project_root": "/Users/vanshikaarora/Desktop/Tracking",
+  "embeddings_root": "/Users/vanshikaarora/Desktop/Tracking/embeddings",
+  "output_root": "/Users/vanshikaarora/Desktop/Tracking/Single-multiframe",
+  "encoders": {
+    "clip": {
+      "embedding_dir": "/Users/vanshikaarora/Desktop/Tracking/embeddings/embedding-store/clip",
+      "expected_dimension": 512,
+      "actual_shape": [
+        6662,
+        512
+      ]
+    },
+    "siglip": {
+      "embedding_dir": "/Users/vanshikaarora/Desktop/Tracking/embeddings/embedding-store/siglip",
+      "expected_dimension": 768,
+      "actual_shape": [
+        6662,
+        768
+      ]
+    }
+  },
+  "split_sizes": {
+    "train": 664,
+    "validation": 143,
+    "test": 143
+  },
+  "label_to_id": {
+    "brush_hair": 0,
+    "cartwheel": 1,
+    "catch": 2,
+    "chew": 3,
+    "clap": 4,
+    "climb": 5,
+    "climb_stairs": 6,
+    "dive": 7,
+    "draw_sword": 8
+  },
+  "model_specs": [
+    [
+      "SingleFrame",
+      "single"
+    ],
+    [
+      "MeanPooling",
+      "mean"
+    ],
+    [
+      "GRU",
+      "sequence"
+    ],
+    [
+      "LSTM",
+      "sequence"
+    ],
+    [
+      "Transformer_Encoder",
+      "sequence"
+    ],
+    [
+      "Temporal_CNN",
+      "sequence"
+    ]
+  ],
+  "training": {
+    "batch_size": 32,
+    "max_epochs": 60,
+    "patience": 10,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "dropout": 0.25,
+    "checkpoint_selection": "validation macro-F1"
+  },
+  "methodology": {
+    "split_unit": "video",
+    "split_ratios_approx": {
+      "train": 0.7,
+      "validation": 0.15,
+      "test": 0.15
+    },
+    "single_frame_selection": "middle frame by sorted frame index",
+    "mean_pooling_control": "arithmetic mean of all frame embeddings",
+    "temporal_inputs": "ordered frame embeddings with padding masks/lengths",
+    "order_control": "shuffle valid test frames with fixed seed at evaluation",
+    "visual_encoder_frozen": true
+  }
+}

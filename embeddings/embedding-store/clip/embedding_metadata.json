@@ -1,0 +1,10 @@
+{
+  "model_id": "openai/clip-vit-base-patch32",
+  "model_kind": "clip",
+  "num_frames": 6662,
+  "embedding_dimension": 512,
+  "l2_normalized": true,
+  "device": "mps",
+  "batch_size": 32,
+  "source_manifest": "/Users/vanshikaarora/Desktop/Tracking/data/processed/sequences.csv"
+}

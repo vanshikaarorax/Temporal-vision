@@ -1,0 +1,3 @@
+encoder,videos,classes,frames_total,frames_min,frames_median,frames_max,embedding_dim
+clip,950,9,6662,7,7.0,8,512
+siglip,950,9,6662,7,7.0,8,768

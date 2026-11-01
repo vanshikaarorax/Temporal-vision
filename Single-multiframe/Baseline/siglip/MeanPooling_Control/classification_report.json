@@ -1,0 +1,69 @@
+{
+  "brush_hair": {
+    "precision": 0.9333333333333333,
+    "recall": 0.875,
+    "f1-score": 0.9032258064516129,
+    "support": 16.0
+  },
+  "cartwheel": {
+    "precision": 1.0,
+    "recall": 0.9375,
+    "f1-score": 0.967741935483871,
+    "support": 16.0
+  },
+  "catch": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 15.0
+  },
+  "chew": {
+    "precision": 0.85,
+    "recall": 1.0,
+    "f1-score": 0.918918918918919,
+    "support": 17.0
+  },
+  "clap": {
+    "precision": 0.9473684210526315,
+    "recall": 0.9,
+    "f1-score": 0.9230769230769231,
+    "support": 20.0
+  },
+  "climb": {
+    "precision": 1.0,
+    "recall": 0.9375,
+    "f1-score": 0.967741935483871,
+    "support": 16.0
+  },
+  "climb_stairs": {
+    "precision": 0.9444444444444444,
+    "recall": 1.0,
+    "f1-score": 0.9714285714285714,
+    "support": 17.0
+  },
+  "dive": {
+    "precision": 0.9473684210526315,
+    "recall": 0.9473684210526315,
+    "f1-score": 0.9473684210526315,
+    "support": 19.0
+  },
+  "draw_sword": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 7.0
+  },
+  "accuracy": 0.951048951048951,
+  "macro avg": {
+    "precision": 0.9580571799870046,
+    "recall": 0.9552631578947369,
+    "f1-score": 0.9555002790996,
+    "support": 143.0
+  },
+  "weighted avg": {
+    "precision": 0.9537500511184722,
+    "recall": 0.951048951048951,
+    "f1-score": 0.9511664380150732,
+    "support": 143.0
+  }
+}

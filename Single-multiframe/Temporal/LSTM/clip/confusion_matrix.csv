@@ -1,0 +1,10 @@
+,brush_hair,cartwheel,catch,chew,clap,climb,climb_stairs,dive,draw_sword
+brush_hair,15,0,0,0,1,0,0,0,0
+cartwheel,0,15,0,0,0,0,1,0,0
+catch,0,0,15,0,0,0,0,0,0
+chew,0,0,0,17,0,0,0,0,0
+clap,0,0,0,0,20,0,0,0,0
+climb,0,0,0,0,0,15,0,1,0
+climb_stairs,0,1,0,0,0,0,15,1,0
+dive,0,0,0,0,1,3,0,15,0
+draw_sword,0,0,0,0,0,0,0,0,7

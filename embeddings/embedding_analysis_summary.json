@@ -1,0 +1,36 @@
+{
+  "dataset": "HMDB51 local downloaded subset",
+  "project_root": "/Users/vanshikaarora/Desktop/Tracking",
+  "input_manifest": "/Users/vanshikaarora/Desktop/Tracking/data/processed/sequences.csv",
+  "num_frame_records": 6662,
+  "num_videos": 950,
+  "num_classes": 9,
+  "models": {
+    "clip": {
+      "model_id": "openai/clip-vit-base-patch32",
+      "shape": [
+        6662,
+        512
+      ],
+      "embedding_dimension": 512,
+      "l2_normalized": true
+    },
+    "siglip": {
+      "model_id": "google/siglip-base-patch16-224",
+      "shape": [
+        6662,
+        768
+      ],
+      "embedding_dimension": 768,
+      "l2_normalized": true
+    }
+  },
+  "analyses": [
+    "consecutive-frame cosine similarity",
+    "video-to-video similarity using mean pooling",
+    "PCA temporal embedding trajectories",
+    "mean and max temporal pooling"
+  ],
+  "device": "mps",
+  "random_seed": 42
+}

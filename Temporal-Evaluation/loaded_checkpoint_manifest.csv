@@ -1,0 +1,13 @@
+encoder,model,checkpoint,best_epoch,best_validation_macro_f1
+clip,SingleFrame,/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Baseline/clip/SingleFrame/best_model.pt,14,0.9434175206670962
+clip,MeanPooling,/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Baseline/clip/MeanPooling_Control/best_model.pt,13,0.9674038468605531
+clip,GRU,/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Temporal/GRU/clip/best_model.pt,13,0.9550429103060681
+clip,LSTM,/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Temporal/LSTM/clip/best_model.pt,22,0.9609765609765609
+clip,Transformer_Encoder,/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Temporal/Transformer_Encoder/clip/best_model.pt,14,0.9739207106142591
+clip,Temporal_CNN,/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Temporal/Temporal_CNN/clip/best_model.pt,18,0.9676495837998385
+siglip,SingleFrame,/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Baseline/siglip/SingleFrame/best_model.pt,26,0.9382648880681926
+siglip,MeanPooling,/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Baseline/siglip/MeanPooling_Control/best_model.pt,20,0.9677105302105302
+siglip,GRU,/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Temporal/GRU/siglip/best_model.pt,18,0.9324403792145728
+siglip,LSTM,/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Temporal/LSTM/siglip/best_model.pt,13,0.9498427964202946
+siglip,Transformer_Encoder,/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Temporal/Transformer_Encoder/siglip/best_model.pt,5,0.9699384451548103
+siglip,Temporal_CNN,/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Temporal/Temporal_CNN/siglip/best_model.pt,17,0.9567853832212605

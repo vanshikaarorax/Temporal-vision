@@ -1,0 +1,9 @@
+encoder,model,best_validation_macro_f1,history_file
+clip,GRU,0.9550429103060681,/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Temporal/GRU/clip/training_history.csv
+siglip,GRU,0.9324403792145728,/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Temporal/GRU/siglip/training_history.csv
+clip,LSTM,0.9609765609765609,/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Temporal/LSTM/clip/training_history.csv
+siglip,LSTM,0.9498427964202946,/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Temporal/LSTM/siglip/training_history.csv
+clip,Temporal_CNN,0.9676495837998385,/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Temporal/Temporal_CNN/clip/training_history.csv
+siglip,Temporal_CNN,0.9567853832212605,/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Temporal/Temporal_CNN/siglip/training_history.csv
+clip,Transformer_Encoder,0.9739207106142591,/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Temporal/Transformer_Encoder/clip/training_history.csv
+siglip,Transformer_Encoder,0.9699384451548103,/Users/vanshikaarora/Desktop/Tracking/Single-multiframe/Temporal/Transformer_Encoder/siglip/training_history.csv

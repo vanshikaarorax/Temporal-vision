@@ -1,0 +1,36 @@
+# The VLM notebook uses Apple MLX on Apple Silicon. The MLX dependency is
+# platform-specific and is included conditionally below.
+
+# Core numerical and data handling
+numpy
+pandas
+scipy
+
+# Video and image processing
+opencv-python
+Pillow
+
+# Deep learning and pretrained visual encoders (CLIP / SigLIP)
+torch
+torchvision
+transformers
+huggingface-hub
+safetensors
+accelerate
+sentencepiece
+protobuf
+
+# Classical ML, metrics, and evaluation
+scikit-learn
+
+# Visualization and notebook environment
+matplotlib
+seaborn
+tqdm
+jupyter
+notebook
+ipykernel
+ipywidgets
+
+# VLM inference with Apple MLX (Apple Silicon / macOS only)
+mlx-vlm; platform_system == "Darwin" and platform_machine == "arm64"
